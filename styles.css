@@ -16,35 +16,20 @@
 
   text-decoration: none;
 }
-
 a:link {
   text-decoration: none;
 }
-
 a:visited {
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 a:active {
   text-decoration: none;
 }
-
 body {
   background-color: var(--bg-secondary);
   min-height: 100%;
   min-width: 100%;
-}
-
-
-.navbar {
-  background-color: var(--bg-quaternary);
-  transition: background-color var(--transition-speed);
-}
-.navbar:hover {
-  background-color: var(--bg-quaternary);
-  transition: background-color var(--transition-speed);
 }
