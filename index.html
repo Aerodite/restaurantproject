@@ -22,11 +22,13 @@
       }
 
       #navbarparent{
-        position: absolute;
+        position: sticky;
         width: 50%;
         left: 50%;
         top: 10px;
         transform: translate(-50%, 0);
+        align-items: center;
+        justify-content: center;
         border-radius: 3rem;
 
       }
@@ -35,13 +37,13 @@
         overflow: hidden;
         background-color: #f1f1f1;
         padding: 80px 80px;
-        transition: 0.4s;
         position: fixed;
         width: 100%;
         height: 10%;
         top: 0;
-        z-index: 99;
+        z-index: 9;
         border-radius: 2rem;
+        transition: var(--transition-speed);
       }
 
       #navbar a {
@@ -55,18 +57,24 @@
         border-radius: 4px;
       }
 
-      #navbar #logo {
-      position: absolute;
-        top: 1.75rem;
+       #navbar #logo {
+        position: absolute;
+        float: left;
         left: 0;
-        padding: 6px;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        padding: 0;
+         margin-top: 0;
+         transition: var(--transition-speed);
 
       }
 
+/*
       #navbar a:hover {
         background-color: #ddd;
         color: black;
-      }
+      }*/
 
       #navbar-right {
         float: right;
@@ -74,7 +82,7 @@
 
       @media screen and (max-width: 580px) {
         #navbar {
-          padding: 20px 10px !important;
+          padding: 30px 15px !important;
         }
         #navbar a {
           float: none;
@@ -84,19 +92,36 @@
         #navbar-right {
           float: none;
         }
+        #navbar #logo{
+            position: absolute;
+            float: left;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            overflow: hidden;
+            padding: 6px;
+          width: 100%;
+          height: 100%;
+          transition: var(--transition-speed);
+        }
       }
     </style>
-    <script>
+    <script id="onscroll">
       // When the user scrolls down 80px from the top of the document, resize the navbar's padding.
       window.onscroll = function() {scrollFunction()};
 
       function scrollFunction() {
         if (document.body.scrollTop < 0 || document.documentElement.scrollTop < 0) {
-          document.getElementById("navbar").style.padding = "100px 90px"}
+          document.getElementById("navbar").style.padding = "60px 15px";}
         else if (document.body.scrollTop < 80 || document.documentElement.scrollTop < 80){
-          document.getElementById("navbar").style.padding = "50px 90px";}
+          document.getElementById("navbar").style.padding = "50px 75%";}
       }
+
+      //ok awful idea, I should add an animation to the navbar making a circle split off with a search bar onscroll.
+      //trust me this would be great :D
     </script>
+<!---script 2-->
+
   </head>
 
 
