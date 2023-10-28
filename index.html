@@ -85,18 +85,62 @@
 
        }
 
+      nav{
+        display: flex;
+        padding: 0% 3%;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+      }
+
+      .nav-links{
+        flex: 1;
+        text-align: right;
+        z-index: 99;
+      }
+      .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 8px 15px;
+        position: fixed;
+        z-index: 99;
+      }
+      .nav-links ul li a{
+        color: #000000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+        z-index: 99;
+      }
+      .nav-links ul li::after{
+        content: '';
+        width: 0;
+        height: 4px;
+        background: #476df3;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+        z-index: 99;
+      }
+      .nav-links ul li:hover::after{
+        width: 100%;
+        z-index: 99;
+      }
+
+
       #navbar-right {
         float: none;
         transition: var(--transition-speed);
       }
       #navbar:hover{
-        #logo{
+
+      #logo{
           position: absolute;
           transform: translate(-40%, 0);
           width: 100%;
           height: 100%;
           transition: var(--transition-speed);
-          z-index: 50;
+          z-index: 4;
         }
       }
 
@@ -129,25 +173,7 @@
 
       }
 
-      #nav-items{
-        z-index: 100;
-        display: flex;
-        float: left;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        overflow: hidden;
-        padding: 6px;
-        width: 100%;
-        height: 100%;
-        transition: var(--transition-speed);
-        color: black;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
 
-
-      }
     </style>
     <script id="onscroll">
       // When the user scrolls down 80px from the top of the document, resize the navbar's padding.
@@ -183,18 +209,15 @@
 
 
   <body class="w-screen h-screen bg-red-500">
+  <nav>
 <div id="navbarparent">
   <div id="navbar">
     <img src="/resources/svgs/logo.svg" id="logo">
     <div id="navbar-right">
-      <div id="nav-items">
+      <div id="nav-items" class="nav-links">
         <ul>
-          <li>
-            <a href="./menu.html">Menu</a>
-          </li>
-          <li>
-            <a href="./about.html">About Us</a>
-          </li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./about.html">About Us</a></li>
           <li>
 
           </li>
@@ -202,12 +225,8 @@
       </div>
     </div>
   </div>
-
-
-
 </div>
-
-
+  </nav>
 
   <!--
   <div class="grid grid-cols-1 place-items-center py-8">
