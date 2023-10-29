@@ -96,3 +96,18 @@ body {
 .outlined-text {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+#mc-logo{
+  width: 37%;
+}
+
+#dennys-logo{
+  width: 100%;
+  height: 100%;
+}
+
+#menu{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
